@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+section {
+    padding-block: 60px;
+    overflow: hidden;
+}
+/* Navbar */
+@media (max-width: 991px) {
+    .offcanvas {
+        background-color: rgba(54, 54, 54, 0.7);
+    }
+    .offcanvas a {
+        color: #fff;
+    }
+}
+/* Carousel */
+@media(min-width:1200px){
+    .carousel-item img {
+        vertical-align: center;
+        height: 700px;
+    }
+}
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.carousel-inner h5 {
+    font-size: 2rem;
+    color: #3b3b3b;
+}
+.carousel-inner p {
+    font-size: 1.2rem;
+    color: #3b3b3b;
+}
+/* About Us */
+.about-img {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.447);
+}
+.about-img img {
+    border-radius: 5px;
+}
+/* Team */
+@media (max-width:520px) {
+    .team {
+        margin-top: -60px;
+    }
+    .section-title p {
+        font-size: 12px;
+    }
+}
+.team .member {
+    position: relative;
+    padding: 30px;
+    box-shadow: 0px 2px 15px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    background: #fff;
+}
+.team .member .teampic {
+    overflow: hidden;
+    width: 180px;
+    border-radius: 50%;
+}
+.team .member .member-info {
+    padding-left: 30px;
+}
+.team .member h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: tomato;
+}
+.team .member span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    font-weight: 500;
+}
+.team .member span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: black;
+    bottom: 0;
+    left: 0;
+}
+.team .member p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+}
+.team .member .social {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.team .member .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #f7f7f7;
+    transition: .3s;
+    border-radius: 50%
+}
+.team .member .social a i {
+    color: tomato;
+    font-size: 16px;
+    margin: 0 2px;
+    transition: .3s;
+}
+.team .member .social a:hover {
+    background: tomato;
+}
+.team .member .social a:hover i {
+    color: white;
+}
+.team .member .social a+a {
+    margin-left: 8px;
+}
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.underline {
+    width: 150px;
+    height: 1px;
+    background-color: black;
+    margin: auto;
+    margin-top: -30px;
+}
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: tomato;
+}
+.section-title p {
+    margin-top: 20px;
+}
+/* Services */
+.Services {
+    background-position: center;
+    background-size: cover;
+}
+.services-card {
+    position: relative;
+    width: 300px;
+    height: 320px;
+    border-radius: 12px;
+}
+.services-card span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(255, 255, 255, 0.605);
+    z-index: 2;
+}
+.services-card span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #00000004;
+}
+.services-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #fbc2eb 0%, #a6c1ee 100%);
+
+}
+.services-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #fbc2eb 0%, #a6c1ee 100%);
+    filter: blur(30px);
+}
+.services-card:nth-child(2)::before,
+.services-card:nth-child(2)::after{
+    background-image: linear-gradient(45deg, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+}
+.services-card:nth-child(3)::before,
+.services-card:nth-child(3)::after{
+    background-image: linear-gradient(45deg, #d4fc79 0%, #cffffd 100%);
+}
+.services-img {
+    position: absolute;
+    z-index: 3;
+}
+.services-text {
+    position: absolute;
+    top: 230px;
+    z-index: 4;
+    text-align: center;
+}
+.services-text h2 {
+    font-size: 25px;
+}
+.services-text h3 {
+    font-size: 15px;
+}
+.stust {
+    position: absolute;
+    z-index: 3;
+    bottom: 10px;
+    right: 10px;
+}

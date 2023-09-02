@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*,h1,h2,h3,h4,h5,h6,span {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary: #81c4ff;
+    --white: #fff;
+    --gray: #e4e4e4;
+    --purple: #9553ff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
