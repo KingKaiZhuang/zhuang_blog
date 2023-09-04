@@ -17,6 +17,11 @@ app.use(express.static(path.join(__dirname,"application")));
 app.get("/",(req,res)=>{
     res.render("index.html");
 });
+
+app.get("/login", (req, res) => {
+    res.render("login.html");
+});
+
 app.use("/auth",authRouter);
 
 app.use("/company",successfulRouter);

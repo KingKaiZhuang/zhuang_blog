@@ -7,7 +7,11 @@ $(function(){
 
         $.ajax({
             url : "/auth",
-            type : "POST"
+            type : "POST",
+            data : {
+                userName,
+                passWord
+            }
         })
         .then(data => {
             console.log(data);
@@ -15,5 +19,6 @@ $(function(){
         .catch(err => {
             console.log(err);
         });
+        event.preventDefault();
     })
 })
