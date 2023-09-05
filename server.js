@@ -8,7 +8,8 @@ const path = require("path");
 // page
 const successfulRouter = require("./router/successful_people");
 const aboutRouter = require("./router/about");
-const authRouter = require("./router/auth")
+const authRouter = require("./router/auth");
+const expertiseRouter = require("./router/expertise")
 
 app.engine("html",hbs.__express);
 app.set("views",path.join(__dirname,"application","views"));
@@ -26,6 +27,7 @@ app.use("/auth",authRouter);
 
 app.use("/company",successfulRouter);
 app.use("/about",aboutRouter);
+app.use("/expertise",expertiseRouter);
 
 app.listen(portNum,(req,res)=>{
     console.log(`Server is running at ${portNum} !`);
