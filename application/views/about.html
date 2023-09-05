@@ -4,88 +4,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUST KAI</title>
-    <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <!-- Bootstrap 5 CDN Links -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    <title>KingKaiZhuang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- my-css -->
+    <link rel="icon" href="./images/icon.png">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/grid.css">
     <link rel="stylesheet" href="../css/about.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- 圖片輪播 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="../css/owl.css">
+    <!-- wow 套件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css"
+        integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
-    <!-- Navbar section -->
-    <header class="header_wrapper">
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="images/logo.png" alt="">
-                </a>
-                <button class="navbar-toggler border-0 shadow-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars-staggered fa-xl "></i>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav menu-navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link"  href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="main-btn" href="#contact">Hire me</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Navbar section exit -->
+<body>
+    <input type="checkbox" name="" id="side-menu-switch">
 
-    <!-- Banner section -->
-    <section id="home" class="banner_wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center text-md-start">
-                    <h6>WELCOME TO MY WORLD</h6>
-                    <h1>I'm Jun Kai<br><span class="multiple-text"></span><br>based in Taiwan.</h1>
-                    <div class="mt-5">
-                        <a href="#" class="main-btn">Download CV</a>
+    <div class="side-menu">
+        <nav>
+            <img src="./images/my-picture.jpg" alt="" class="intorduce-img">
+            <h3 class="menu-font">STUST</h3>
+            <h4 class="menu-font">五專資工三甲</h4>
+            <p class="menu-font">莊鈞凱</p>
+            <p class="menu-font">Zhuang</p>
+            <p class="menu-font">Jun</p>
+            <p class="menu-font">Kai</p>
+            <a href="https://kingkaizhuang-contect.netlify.app/"
+                style="font-size: 1.5rem;text-decoration: none;color: aliceblue;" class="contect btn btn-blue">聯絡資訊</a>
+        </nav>
+        <label for="side-menu-switch" id="side-menu-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+        </label>
+    </div>
+
+    <div class="my-introduce">
+        <a href="#" class="nav-toggle collapse-btn fa-solid fa-bars"></a>
+        <div class="menu-right">
+            <p style="font-size: 1.5rem;color: #ffffff;">MENU</p>
+            <a href="/">首頁</a>
+            <a href="/company">我的公司</a>
+            <a href="/">專長</a>
+            <a href="/about">關於我</a>
+        </div>
+    </div>
+
+    <div class="title">
+        <h1 class="logo fa-regular fa-circle-user">King_Kai_Zhuang</h1>
+    </div>
+
+    <div class="wow fadeIn banner" data-wow-duration="1.5s">
+        <div class="banner-txt">
+            <h3 class="text-center">STUST BACKEND</h3>
+            <div class="start text-center">
+                <p><i class="fa-solid fa-star"></i> 網頁前端 <i class="fa-brands fa-html5 fa-xl"></i> <i
+                        class="fa-brands fa-css3-alt fa-xl"></i> <i class="fa-brands fa-js fa-xl"></i></p>
+                <p><i class="fa-solid fa-star"></i> 網頁後端 <i class="bg-green fa-brands fa-node-js fa-xl"></i></p>
+                <p><i class="fa-solid fa-star"></i> 網頁全端工程師 <i class="fa-solid fa-code-branch fa-lg"></i></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="welcome">
+        <div class="owl-carousel owl-theme picture-header" id="product">
+            <img src="../images/about_images/RWD practice.png" alt="">
+            <img src="../images/about_images/Python.png" alt="">
+        </div>
+    </div>
+
+    <section id="transparent-background">
+        <div id="experience" class="experience">
+            <div class="container row justify-content-center">
+                <div class="col-12">
+                    <div class="text-center">
+                        <h2>擅長語言</h2>
                     </div>
+                </div>
+                <div class="wow fadeIn col-12 col-sm-6 col-xl-4 text-center" data-wow-delay="0.5s"
+                    data-wow-duration="1.5s" data-wow-offset="150">
+                    <img src="../images/about_images/html5.png" alt="">
+                    <p>整體網頁的架構</p>
+                    <p>我習慣架構寫好在美化</p>
+                </div>
+                <div class="wow fadeIn col-12 col-sm-6 col-xl-4 text-center" data-wow-delay="0.5s"
+                    data-wow-duration="1.5s" data-wow-offset="150">
+                    <img src="../images/about_images/css.png" alt="">
+                    <p>美化網頁</p>
+                    <p>漸層色也太好看!</p>
+                </div>
+                <div class="wow fadeIn col-12 col-sm-6 col-xl-4 text-center" data-wow-delay="0.5s"
+                    data-wow-duration="1.5s" data-wow-offset="150">
+                    <img src="../images/about_images/javascript.png" alt="">
+                    <p>加入動作與動畫</p>
+                    <p>老實說jquerry用的比較多</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Banner section exit -->
-    <!-- About section -->
-    <!-- About section exit -->
-    <!-- Services section -->
-    <!-- Services section exit -->
-    <!-- Portfolio Section -->
-    <!-- Portfolio Section exit -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+
+    <section id="program">
+        <div class="container row">
+            <div class="col-12">
+                <div class="text-center">
+                    <h2>心得</h2>
+                </div>
+            </div>
+            <div class="wow fadeInLeft language col-12">
+                <div class="picture col-sm-6 col-lg-4 text-center">
+                    <img src="../images/about_images/C++.png" alt="">
+                </div>
+                <div class="feelings col-sm-6 col-lg-8">
+                    <p>C++是我第一個學的程式語言，對於初學者來說確實可能不容易上手，不過我覺得學C++可以更了解電腦執行程式的流程。</p>
+                    <p>1. 程式基礎：學會C++要學其他語言也變得很容易。</p>
+                    <p>2. 接近硬體層面：C++提供了直接操作記憶體和硬體資源的能力，使您能夠深入瞭解電腦系統的運作原理。</p>
+                    <p>3. 多用途語言：C++不僅適用於軟體開發，還廣泛應用於系統程式設計、嵌入式系統、遊戲開發等領域。</p>
+                </div>
+            </div>
+            <!-- 第二個要調整div順序不然手機板會變成上下顛倒 文字 class 設為 turnsit 相片設為 turnimg-->
+            <div class="wow fadeInRight language col-12">
+                <div class="feelings turnsit col-sm-6 col-lg-8">
+                    <p>我先學(JS)，才學jquery(JQ)</p>
+                    <p>JavaScript支援更廣泛的功能和語法，可以用於更複雜的開發需求。</p>
+                </div>
+                <div class="picture turnimg col-sm-6 col-lg-4 text-center">
+                    <img src="../images/about_images/JS or JQ.png" alt="">
+                </div>
+            </div>
+            <div class="wow fadeInLeft language col-12">
+                <div class="picture col-sm-6 col-lg-4 text-center">
+                    <img src="../images/about_images/python-logo.png" alt="">
+                </div>
+                <div class="feelings col-sm-6 col-lg-8">
+                    <p>我對python的想法就是直覺、解題快，用途廣，像是數據分析、人工智慧、科學計算、自動化腳本等多個領域。 我也才剛接觸，過一陣子再把我對python的心得加進來。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="text-center">2023 Successful People</div>
+        <div class="text-center">Made by Zhuang jun Kai</div>
+    </footer>
+
+    <a href="#" class="gotop animated">
+        <i class="fa-solid fa-chevron-up fa-2x"></i>
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-        crossorigin="anonymous"></script>
+
+    <!-- Messenger 洽談外掛程式 Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your 洽談外掛程式 code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
     <script src="../js/about.js"></script>
 </body>
 
