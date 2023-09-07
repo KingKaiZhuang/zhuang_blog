@@ -13,6 +13,7 @@ const aboutRouter = require("./router/about");
 const authRouter = require("./router/auth");
 const expertiseRouter = require("./router/expertise");
 const mailRouter = require("./router/mail_backend");
+const contactRouter = require("./router/contact");
 
 
 app.engine("html", hbs.__express);
@@ -58,6 +59,7 @@ app.use("/company", successfulRouter);
 app.use("/about", aboutRouter);
 app.use("/expertise", expertiseRouter);
 app.use("/mail", mailRouter);
+app.use("/contact",contactRouter);
 
 app.listen(portNum, (req, res) => {
     console.log(`Server is running at ${portNum} !`);

@@ -21,6 +21,87 @@
 .typed-cursor {
     display: none;
 }
+/* Style the contact form container */
+.contact {
+    padding-block: 50px;
+}
+.contact-form {
+    max-width: 400px;
+    /* margin: 0 auto; */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the form elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+}
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style the footer content */
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the copyright text */
+.copyright {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Style the technologies text */
+.technologies {
+    font-size: 12px;
+}
 
 @media(max-width:520px) {
     .banner {
