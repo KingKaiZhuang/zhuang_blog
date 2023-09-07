@@ -1,0 +1,42 @@
+.hoby {
+    padding-block-start: 100px;
+    padding-block-end: 60px;
+}
+
+body {
+    background-image: linear-gradient(120deg, #e0c3fca9 0%, #c1fc8ed1 100%);
+}
+
+/* 自定義 Navbar */
+.navbar {
+    background: #333;
+    /* 更改 Navbar 背景色 */
+    color: white;
+    /* 更改文字顏色 */
+}
+
+/* 自定義卡片樣式 */
+.card {
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    border: 1px solid #ccc;
+    /*更改邊框*/
+    box-shadow: 5px 5px 8px #3c3c3cad;
+    transition: .3s;
+}
+.card:hover {
+    transform: translate(5px,5px);
+    box-shadow: none;
+}
+
+.card-title {
+    color: #ffffff;
+    /* 更改卡片標題文字顏色 */
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #333333;
+    /* 更改卡片文本文字顏色 */
+    font-size: 20px;
+}

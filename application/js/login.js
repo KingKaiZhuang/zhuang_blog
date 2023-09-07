@@ -13,8 +13,12 @@ $(function(){
                 passWord
             }
         })
-        .then(data => {
-            console.log(data);
+        .then(res => {
+            console.log(res); // 輸出伺服器回應以進行調試
+            if (res.redirect) {
+                console.log(res.redirect); // 輸出重定向 URL 以進行調試
+                window.location.href = res.redirect;
+            }
         })
         .catch(err => {
             console.log(err);
