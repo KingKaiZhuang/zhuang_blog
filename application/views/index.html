@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id"
+        content="390305927530-klobn3dvvjktht7j6ktnp69b8p3v5p4p.apps.googleusercontent.com">
     <title>Zhuang Blog</title>
     <link rel="icon" href="../images/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,7 +21,8 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../images/icon.png" alt="" style="width: 60px;"><span class="ms-3 fs-3">Zhuang Blog</span></a>
+            <a class="navbar-brand" href="#"><img src="../images/icon.png" alt="" style="width: 60px;"><span
+                    class="ms-3 fs-3">Zhuang Blog</span></a>
             <button class="navbar-toggler border-0 shadow-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -42,7 +45,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>
                     </li>
-
+                    <li class="nav-item">
+                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -61,6 +66,28 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="../js/index.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+
+        function onSignIn(googleUser) {
+            var id_token = googleUser.getAuthResponse().id_token;
+        }
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://yourbackend.example.com/tokensignin');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function () {
+            console.log('Signed in as: ' + xhr.responseText);
+        };
+        xhr.send('idtoken=' + id_token);
+    </script>
 </body>
 
 </html>
