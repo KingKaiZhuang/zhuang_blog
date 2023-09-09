@@ -169,7 +169,7 @@ footer {
     padding-bottom: 16px;
 }
 
-h2.text-center.pb-5::after {
+h2.text-center.pb-4::after {
     content: "";
     display: block;
     width: 280px; /* Adjust the width as needed */
