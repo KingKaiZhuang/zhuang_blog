@@ -1,5 +1,5 @@
 const typed = new Typed('.banner-text',{
-    strings: ['Welcom !'],
+    strings: ['Welcome !'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000
