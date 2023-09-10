@@ -13,6 +13,32 @@ $(document).ready(function() {
     });
 });
 
+$(function(){
+    $("#addTask").click(()=>{
+        let date = $("#date").val();
+        let time = $("#time").val();
+        let task = $("#task").val();
+        let urgent = $("#urgent").val();
+        $.ajax({
+            url : "/tasks/addTask",
+            type : "POST",
+            data : {
+                date,
+                time,
+                task,
+                urgent
+            }
+        })
+        .then(result =>{
+            console.log(result);
+        })
+        .catch(err =>{
+            console.log(err);
+        });
+        e.preventDefault();
+    })
+})
+
 let createTable = (data) => {
     data = data || [];
 

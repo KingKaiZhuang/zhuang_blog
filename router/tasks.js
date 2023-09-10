@@ -15,4 +15,14 @@ router.get("/things",async(req,res)=>{
     }
 });
 
+router.post("/addTask",async(req,res)=>{
+    try {
+        let task = req.body;
+        let data = await model.tasks.create(task);
+        res.json({message : data});
+    }catch(err){
+        console.log(err);
+    }
+})
+
 module.exports = router;

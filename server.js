@@ -35,13 +35,13 @@ const redisStore = require("connect-redis")(session);
 
 // set session
 app.use(session({
-    store : new redisStore({client : redisClient}),
+    store: new redisStore({ client: redisClient }),
     secret: 'c90dis90#', // 密鑰，用於加密 Session
     resave: true,             // 是否在每次請求時重新保存 Session
     saveUninitialized: false,   // 是否在沒有初始 Session 時保存 Session
-    name: "_ntust_tutorial_id", 
+    name: "_ntust_tutorial_id",
     ttl: 24 * 60 * 60 * 1 // session 資料有效時間
-  }));
+}));
 
 app.get("/",
     validator.isUserLogin,
@@ -54,14 +54,14 @@ app.get("/login", (req, res) => {
     res.render("login.html");
 });
 
-app.use("/auth", authRouter);
+app.use("/auth", validator.isUserLogin, authRouter);
 
-app.use("/company", successfulRouter);
-app.use("/about", aboutRouter);
-app.use("/expertise", expertiseRouter);
-app.use("/mail", mailRouter);
-app.use("/contact",contactRouter);
-app.use("/tasks",tasksRouter);
+app.use("/company", validator.isUserLogin, successfulRouter);
+app.use("/about", validator.isUserLogin, aboutRouter);
+app.use("/expertise", validator.isUserLogin, expertiseRouter);
+app.use("/mail", validator.isUserLogin, mailRouter);
+app.use("/contact", validator.isUserLogin, contactRouter);
+app.use("/tasks", validator.isUserLogin, tasksRouter);
 
 app.listen(portNum, (req, res) => {
     console.log(`Server is running at ${portNum} !`);
