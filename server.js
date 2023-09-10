@@ -54,7 +54,7 @@ app.get("/login", (req, res) => {
     res.render("login.html");
 });
 
-app.use("/auth", validator.isUserLogin, authRouter);
+app.use("/auth", authRouter);
 
 app.use("/company", validator.isUserLogin, successfulRouter);
 app.use("/about", validator.isUserLogin, aboutRouter);

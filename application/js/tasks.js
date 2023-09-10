@@ -30,7 +30,12 @@ $(function(){
             }
         })
         .then(result =>{
+            alert("新增成功!");
             console.log(result);
+            date = {};
+            time = {};
+            task = {};
+            urgent = {};          
         })
         .catch(err =>{
             console.log(err);
