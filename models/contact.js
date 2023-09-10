@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const conn = require("./db");
-// module.exports = conn;
 
 const contactSchema = mongoose.Schema(
     {

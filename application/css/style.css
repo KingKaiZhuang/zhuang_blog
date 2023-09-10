@@ -1,12 +1,3 @@
-#navbarNavDropdown a {
-    font-size: 20px;
-    margin-inline: 18px;
-    transition: .3s;
-}
-#navbarNavDropdown a:hover {
-    color: #000000;
-    
-}
 .background-fix {
     position: fixed;
     top: 0;

@@ -1,3 +1,4 @@
 module.exports = {
-    contact : require("./contact")
+    contact : require("./contact"),
+    tasks : require("./tasks")
 }
