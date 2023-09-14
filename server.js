@@ -56,7 +56,7 @@ app.get("/login", (req, res) => {
 
 app.use("/auth", authRouter);
 
-app.use("/company", validator.isUserLogin, successfulRouter);
+app.use("/company", successfulRouter);
 app.use("/about", validator.isUserLogin, aboutRouter);
 app.use("/expertise", validator.isUserLogin, expertiseRouter);
 app.use("/mail", validator.isUserLogin, mailRouter);
