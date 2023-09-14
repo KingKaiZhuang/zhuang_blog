@@ -54,6 +54,12 @@ app.get("/login", (req, res) => {
     res.render("login.html");
 });
 
+app.get("/logout", (req, res) => {
+    req.session.destroy();
+    res.clearCookie("_ntust_tutorial_id"); // 刪掉 cookie 的 key-value pair
+    res.redirect("/login");
+})
+
 app.use("/auth", authRouter);
 
 app.use("/company", successfulRouter);
