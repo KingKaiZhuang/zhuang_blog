@@ -54,13 +54,20 @@ app.get("/login", (req, res) => {
     res.render("login.html");
 });
 
+<<<<<<< HEAD
 app.get("/logout",(req,res)=>{
     
+=======
+app.get("/logout", (req, res) => {
+    req.session.destroy();
+    res.clearCookie("_ntust_tutorial_id"); // 刪掉 cookie 的 key-value pair
+    res.redirect("/login");
+>>>>>>> ef95fea62e6f0b742c6214f3189a32fd30845537
 })
 
 app.use("/auth", authRouter);
 
-app.use("/company", validator.isUserLogin, successfulRouter);
+app.use("/company", successfulRouter);
 app.use("/about", validator.isUserLogin, aboutRouter);
 app.use("/expertise", validator.isUserLogin, expertiseRouter);
 app.use("/mail", validator.isUserLogin, mailRouter);
